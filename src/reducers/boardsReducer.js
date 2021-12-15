@@ -1,6 +1,6 @@
-export const gameReducer = (state = [], action) => {
+export const boardsReducer = (state = [], action) => {
     switch(action.type){
-        case 'FETCH_GAMES':
+        case 'FETCH_BOARDS':
             return action.payload
             default:
                 return state 

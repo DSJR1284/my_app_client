@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux'
-import {gameReducer} from './gameReducer'
-import {charReducer} from './charReducer'
+import {boardsReducer} from './boardsReducer'
+import {postsReducer} from './postsReducer'
 
 export const rootReducer = combineReducers({
-    game: gameReducer,
-    char: charReducer
+    boards: boardsReducer,
+    posts: postsReducer
 })
