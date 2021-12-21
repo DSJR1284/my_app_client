@@ -1,9 +1,10 @@
 import React from 'react'
+import BoardsContainer from './BoardsContainer'
 
 const App = () => {
   return (
     <div className="App">
-      Hello World 
+      <BoardsContainer />
     </div>
   );
 }
