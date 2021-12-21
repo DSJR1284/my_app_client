@@ -1,12 +1,12 @@
 import React from 'react'
-import BoardsContainer from './BoardsContainer'
-import PostsContainer from './PostsContainer'
+// import BoardsContainer from './BoardsContainer'
+import Router from './Router'
+// import PostsContainer from './PostsContainer'
 
 const App = () => {
   return (
     <div className="App">
-      <BoardsContainer />
-      <PostsContainer />
+      <Router />
     </div>
   );
 }

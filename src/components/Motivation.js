@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Motavation = () => {
+const Motivation = () => {
     return (
         <div>
-            Motavation
+            Motivation
         </div>
     )
 }
 
-export default Motavation;
+export default Motivation;

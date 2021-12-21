@@ -1,20 +1,20 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Switch, Route} from 'react-router-dom'
 
-import Home from './componets/home'
-import About from './componets/about'
-import Motavation from './componets/motavation'
+import Home from './Home'
+import About from './About'
+import Motivation from './Motivation'
 import BoardsContainer from './BoardsContainer'
 
 
 
- function Router() {
+const Router = () => {
     return (
         <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/about' component={About} />
-            <Route exact path='/motavation' component={Motavation} />
-            <Route exact path='/Boards' component={BoardsContainer} />
+            <Route exact path='/motivation' component={Motivation} />
+            <Route exact path='/boards' component={BoardsContainer} />
         </Switch>
     )
 }
