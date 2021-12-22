@@ -19,14 +19,13 @@ class PostsForm extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
+        // e.preventDefault()
         this.props.addPost(this.state)
     }
 
     render() {
         return (
-            <div>
-                Post Form
+            <div className='Form'>
                 <form onSubmit={this.handleSubmit}>
                 <label>Image:</label>
                     <input type='text' value={this.state.image} onChange={this.handleChange} name="image" />

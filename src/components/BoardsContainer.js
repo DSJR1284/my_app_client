@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
 import {fetchBoards} from '../actions/boardsActions'
 import Boards from './Boards'
-import PostsForm from './PostsForm'
 
 
 class BoardsContainer extends Component {
@@ -16,7 +15,6 @@ render() {
         return (
             <div>
                 <Boards />
-                <PostsForm />
             </div>
         )
     }

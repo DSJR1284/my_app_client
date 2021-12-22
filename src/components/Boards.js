@@ -8,15 +8,17 @@ const Boards = ({boards,posts}) => {
     console.log(postsState)
     return (
         <div className='Boards'>
-            {boards.map(b => <ul>
-                <li key={b.id}>
-                    {b.title}
-                </li>            
-            </ul>)}
+            {boards.map(b => <ol>
+                <ul key={b.id}>
+                    <h1>{b.title}</h1>
+                </ul>            
+            </ol>)}
             {posts.map(p => <ul>
+                <img src={p.image} alt={p.description}/>
+                <br/><br/>
                 <li key={p.id}>
-                    {p.image}
                     {p.description}
+                    <br/><br />
                 </li>
             </ul>)}
         </div>

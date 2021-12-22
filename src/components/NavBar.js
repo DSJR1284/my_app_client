@@ -18,6 +18,9 @@ const NavBar = () => {
             <NavLink to="/boards" exact >
                 <li> Boards</li>
             </NavLink>
+            <NavLink to="/Forms" exact >
+                <li> Forms</li>
+            </NavLink>
         </ul>            
         </div>
     )

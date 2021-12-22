@@ -5,6 +5,7 @@ import Home from './Home'
 import About from './About'
 import Motivation from './Motivation'
 import BoardsContainer from './BoardsContainer'
+import PostsForm from './PostsForm'
 
 
 
@@ -15,6 +16,7 @@ const Router = () => {
             <Route exact path='/about' component={About} />
             <Route exact path='/motivation' component={Motivation} />
             <Route exact path='/boards' component={BoardsContainer} />
+            <Route exact path='/forms' component={PostsForm} />
         </Switch>
     )
 }
