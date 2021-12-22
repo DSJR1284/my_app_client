@@ -1,11 +1,12 @@
 import React from 'react'
-// import BoardsContainer from './BoardsContainer'
 import Router from './Router'
-// import PostsContainer from './PostsContainer'
+import NavBar from './NavBar'
+
 
 const App = () => {
   return (
     <div className="App">
+      <NavBar />
       <Router />
     </div>
   );
