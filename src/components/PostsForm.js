@@ -27,10 +27,11 @@ class PostsForm extends Component {
         return (
             <div className='Form'>
                 <form onSubmit={this.handleSubmit}>
-                <label>Image:</label>
-                    <input type='text' value={this.state.image} onChange={this.handleChange} name="image" />
+                <label>Image: </label>
+                    <input type='photo' id="photo" value={this.state.image} onChange={this.handleChange} name="image" />
+                    {/* <button>Upload Image</button> */}
                 <br /> <br />
-                <label>Description:</label>
+                <label>Description: </label>
                     <textarea type='text' value={this.state.description} onChange={this.handleChange} name="description" /> 
                 <br /><br />
                 <input type='submit' value="Add Posts" />
