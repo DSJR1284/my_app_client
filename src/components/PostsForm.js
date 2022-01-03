@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
-import { addPost} from '../actions/postsActions'
+import { addPost } from '../actions/postsActions'
 
 class PostsForm extends Component {
 
@@ -26,6 +26,10 @@ class PostsForm extends Component {
     render() {
         return (
             <div className='Form'>
+                <h1>More About ME</h1>
+                <br/><br/>
+                <h3>Please Fill Out The Form Below To Add To Your Board</h3>
+                <br/><br/>
                 <form onSubmit={this.handleSubmit}>
                 <label>Image: </label>
                     <input type='photo' id="photo" value={this.state.image} onChange={this.handleChange} name="image" />
