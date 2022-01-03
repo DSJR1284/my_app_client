@@ -12,12 +12,12 @@ npm use 16
 ```
 CompoosewithDevTools use 
 ```bash 
-npm install --save redux-devtools-extension
+npm install redux-devtools-extension
 ```
 
 For Routing please install 
 ```bash 
-react-router-dom@5
+npm install react-router-dom@5
 ```
 
 To access the api for this app please refer to  https://github.com/DSJR1284/my_app_api.
