@@ -17,3 +17,15 @@ export const addPost = (post) => {
         .then(post => dispatch({ type: 'ADD_POST', payload: post}))
     }
 }
+
+export const deletePost = _id => {
+    return (dispatch) => {
+        fetch(`http://127.0.0.1:3000/posts/${_id}`, {
+            method: 'DELETE',
+        })
+        .then(resp => resp.json())
+        .then(post => dispatch({ type: 'DELETE_POST', payload: post.id}))
+    }
+}
+
+

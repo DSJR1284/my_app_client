@@ -1,22 +1,31 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
-import {fetchPosts} from '../actions/postsActions'
+import { useDispatch } from 'react-redux'
+import {fetchPosts, deletePost} from '../actions/postsActions'
 
 const Boards = ({boards,posts}) => {
+    const dispatch = useDispatch()    
+    
+    const handleClick = (_id) => {
+        
+
+        dispatch(deletePost(_id))
+        // posts.deletePost(_id)
+    }
     return (
         <div className='Boards'>
-            {boards.map(b => <ol>
-                <ul key={b.id}>
-                    <h1>{b.title}</h1>
+            {boards.map(board => <ol>
+                <ul key={board.id}>
+                    <h1>{board.title}</h1>
                 </ul>            
             </ol>)}
-            {posts.map(p => <ul>
-                <img src={p.image} alt={p.description}/>
+            {posts.map(post => <ul key={post.id}>
+                <img src={post.image} alt={post.description}/>
                 <br/><br/>
-                <li key={p.id}>
-                    {p.description}
-                    <br/><br />
+                <li>
+                    {post.description}                
+                    <br/><br/>
+                    <button onClick= {() => handleClick(post.id)}>DELETE</button><br></br>
                 </li>
             </ul>)}
         </div>
@@ -27,4 +36,10 @@ const mapStateToProps = state => {
     return {boards: state.boards, posts: state.posts}
 }
 
-export default connect(mapStateToProps, fetchPosts)(Boards);
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         delete: post => dispatch({ type: "DELETE_POST", payload: post.id})
+//     }
+// }
+
+export default connect(mapStateToProps,fetchPosts)(Boards);

@@ -16,14 +16,13 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(thunk))
 )
 
-
-ReactDOM.render(
-  <Provider store = {store}>
-    <Router>
+ReactDOM.render(  
+  <Provider store = {store}> 
+    <Router> 
       <App />
     </Router>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root') 
 );
 
 
