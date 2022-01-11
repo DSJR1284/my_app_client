@@ -18,9 +18,10 @@ export const addPost = (post) => {
     }
 }
 
-export const deletePost = _id => {
+export const deletePost = post => {
+    console.log(post)
     return (dispatch) => {
-        fetch(`http://127.0.0.1:3000/posts/${_id}`, {
+        fetch(`http://127.0.0.1:3000/posts/${post}`, {
             method: 'DELETE',
         })
         .then(resp => resp.json())

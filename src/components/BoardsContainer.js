@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import {fetchBoards} from '../actions/boardsActions'
+// import { fetchPosts } from '../actions/postsActions'
 import Boards from './Boards'
 
 
