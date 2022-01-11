@@ -6,7 +6,7 @@ export const postsReducer = (state = [], action) => {
             return [...state, action.payload]
         case 'DELETE_POST':
             const newState = [...state].filter(post => post.id !== action.payload)
-            debugger;
+            // debugger;
             return newState 
             default:
                 return state 
