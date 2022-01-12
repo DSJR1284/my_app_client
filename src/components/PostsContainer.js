@@ -11,12 +11,19 @@ class PostsContainer extends Component {
     }
 
 render() {
+    let postList = this.props.posts.map(post => {
+        return <Posts key={post.id} post={post} />
+    })
         return (
             <div>
-                <Posts />
+                {postList}
             </div>
         )
     }
 }
 
-export default connect(null, {fetchPosts})(PostsContainer);
+const mapStateToProps = state => {
+    return {boards: state.boards, posts: state.posts}
+}
+
+export default connect(mapStateToProps, {fetchPosts})(PostsContainer);

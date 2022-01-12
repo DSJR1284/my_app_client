@@ -18,6 +18,17 @@ export const addPost = (post) => {
     }
 }
 
+export const editPost = post => {
+    console.log(post)
+    return (dispatch) => {
+        fetch(`http://127.0.0.1:3000/posts/${post}`, {
+            method: 'PATCH',
+        })
+        .then(resp => resp.json())
+        .then(post => dispatch({ type: 'EDIT_POST', payload: post.id}))
+    }
+}
+
 export const deletePost = post => {
     console.log(post)
     return (dispatch) => {
